@@ -4,14 +4,17 @@ import TheWelcome from './components/TheWelcome.vue'
 </script>
 
 <template>
+  <!-- TODO: Примените TailwindCSS здесь для стилизации заголовка -->
   <header>
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
+      <!-- TODO: Примените TailwindCSS здесь для стилизации компонента HelloWorld -->
       <HelloWorld msg="You did it!" />
     </div>
   </header>
 
+  <!-- TODO: Примените TailwindCSS здесь для стилизации основного контента -->
   <main>
     <TheWelcome />
   </main>
