@@ -1,6 +1,10 @@
 <script setup lang="ts">
-import HelloWorld from '../widgets/welcome/ui/HelloWorld.vue'
-import { RouterView } from 'vue-router'
+import HelloWorld from "../widgets/welcome/ui/HelloWorld.vue";
+import { RouterView } from "vue-router";
+import { NConfigProvider } from "naive-ui";
+import { inject } from "vue";
+
+const themeOverrides = inject("themeOverrides");
 </script>
 
 <template>
@@ -15,7 +19,9 @@ import { RouterView } from 'vue-router'
   </header>
 
   <main class="w-full flex-grow">
-    <RouterView />
+    <n-config-provider :theme-overrides="themeOverrides || {}">
+      <RouterView />
+    </n-config-provider>
   </main>
 </template>
 
