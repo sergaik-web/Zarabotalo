@@ -31,4 +31,11 @@ export default defineConfigWithVueTs(
     files: ['e2e/**/*.{test,spec}.{js,ts,jsx,tsx}'],
   },
   skipFormatting,
+
+  {
+    files: ['**/*.vue'],
+    rules: {
+      'at-rule-no-unknown': 'off', // Disable for Tailwind's @apply
+    },
+  },
 )
